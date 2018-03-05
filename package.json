@@ -1,0 +1,26 @@
+{
+  "name": "automapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "async": "^0.2.10",
+    "images": "^3.0.0",
+    "express": "^3.2.6",
+    "ejs": "^2.4.1",
+    "osu": "^1.0.1",
+    "socket.io": "^0.9.17",
+    "web-audio-analyser": "^2.0.1",
+    "speaker": "^0.2.6",
+    "av": "^0.4.8",
+    "lame": "^1.2.3",
+    "osu-parser": "^0.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

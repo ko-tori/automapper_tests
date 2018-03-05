@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BPM test</title>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <style type="text/css">
+            body{
+                text-align:center;
+            }
+            .disp{
+                position:relative;
+                /*left:100px;*/
+                height:60px;
+            }
+            .slider{
+                width:256px;
+                margin: 10px auto;
+            }
+            #beat{
+                background-color:red;
+                position: fixed;
+                top:50%;
+                left:50%;
+            }
+            .ui-slider{
+                margin-top:8px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="file" id="fileupload">
+        <div class='disp' id="disp1">Loading...</div>
+        <div class="slider">Time Signature: <div id="timesig"></div></div>
+        <div class="slider">Beat Offset: <div id="beatoffset"></div></div>
+        <div id='beat'></div>
+        <script type="text/javascript" src="analtest.js"></script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+    var sliderv = 16;
+    $(function() {
+        $("#graph").draggable({ containment: "vis", scroll: false });
+    });
+    $(function() {
+        $( "#slider" ).slider({
+            range: "max",
+            min: 6,
+            max: 96,
+            value: 16,
+            slide: function( event, ui ) {
+                    sliderv=ui.value;
+            }
+        });
+    });
+    </script>
+    <style>
+        #fileupload{
+            display:block;
+            position:fixed;
+            top:32px;
+            left:12px;
+        }
+        body{
+            text-align:center;
+        }
+        #slider{
+            position:fixed;
+            width:256px;
+            left:12px;
+        }
+        #graph{
+            opacity:.5;
+            /*border:1px solid black;*/
+            width:192px;
+            height:128px;
+            cursor:pointer;
+            position:fixed;
+            top:64px;
+            left:12px;
+            text-align:right;
+        }
+        #graph:hover{
+            opacity:1;
+        }
+        #vis{
+            top:0px;
+            width:256px;
+            height:258px;
+            margin:0px auto;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            cursor:pointer;
+        }
+        .bar{
+            margin:1px auto;
+            z-index:-1;
+        }
+        .graphbar{
+            width:1px;
+            
+            bottom:0px;
+            display:inline-block;
+            background-color:black;
+        }
+        #workaroundlol{
+            height:196px;
+            visibility:hidden;
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider"></div>
+    <input type="file" id="fileupload">
+    <div id="graph"><div id="workaroundlol"></div></div>
+    <div id="vis"></div>
+    <audio id="hi" loop src="audio.mp3"></audio>
+    <script type="text/javascript" src="audio.js"></script>
+</body>
+</html>
